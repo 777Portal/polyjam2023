@@ -3,10 +3,12 @@ html { /*default size*/
     width: 400px; 
 }
 body {
+    display: block;
     background-color: #2C3333;
     color: #CBE4DE;
     padding: 20px;
     margin: 10px;
+    padding-bottom: 30px
 }
 h1   {
     color: #CBE4DE
@@ -21,15 +23,6 @@ h3   {
 p    {
     color: #CBE4DE;
 } 
-div.topnav{
-    position: absolute;
-    top: 40px;
-    right: 80px;
-    color: #CBE4DE;
-    background-color: #0E8388;
-    margin-left: 10px;
-    width: fit-content;
-}
 div.settings{
     background-color: #0E8388;
     color: #CBE4DE;
@@ -53,11 +46,11 @@ a.settingsIcon {
     top: 10px;
     color: #CBE4DE;
 }
-tooltip{
-    color:#2C3333;
-}
-tooltip:hover {
-    color: yellow;
+a.githubIcon {
+    color: #CBE4DE;
+    position: fixed;
+    left: 5px;
+    bottom: 0;  
 }
 div.box {
     color: #CBE4DE;
