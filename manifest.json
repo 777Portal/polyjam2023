@@ -1,8 +1,12 @@
 {
     "manifest_version": 3,
-    "name": "Placeholder name",
+    "name": "Polyjam 2023 submission",
     "description": "Extension made for the 2023 PolyJam, by ExonAuto.",
-    "version": "0.1",
+    "version": "0.0",
+    "permissions": [
+      "storage",
+      "unlimitedStorage"
+    ],  
     "action": {
       "default_popup": "main.html",
       "width": 300,
