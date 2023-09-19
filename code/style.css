@@ -1,0 +1,84 @@
+html { /*default size*/
+    height: 200px;
+    width: 400px; 
+}
+body {
+    background-color: #2C3333;
+    color: #CBE4DE;
+    padding: 20px;
+    margin: 10px;
+}
+h1   {
+    color: #CBE4DE
+}
+h3   {
+    color: #CBE4DE;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #2C3333;
+    width: fit-content;
+}
+p    {
+    color: #CBE4DE;
+} 
+div.topnav{
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    color: #CBE4DE;
+    background-color: #0E8388;
+    margin-left: 10px;
+    width: fit-content;
+}
+div.settings{
+    background-color: #0E8388;
+    color: #CBE4DE;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    width: fit-content;
+}
+a { 
+    text-decoration: none; 
+    color: white; 
+}
+a:hover {
+    text-decoration: none;
+    color:black; 
+}
+a.settingsIcon {
+    position: absolute;
+    left: 350px;
+    top: 10px;
+    color: #CBE4DE;
+}
+tooltip{
+    color:#2C3333;
+}
+tooltip:hover {
+    color: yellow;
+}
+div.box {
+    color: #CBE4DE;
+    border: 1px solid #ccc;
+    background-color: #2C3333;
+    width: fit-content;
+    margin-bottom: 15px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+div.header {
+    position: relative;
+    text-align: center;
+    width: 500px;
+}
+.circle {
+    border-radius: 25px;
+}
+.center {
+    margin: auto;
+    width: 50%;
+}  
+/*the heat death of the universe august 12 2036*/
