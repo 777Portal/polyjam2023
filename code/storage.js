@@ -183,6 +183,9 @@ async function CandyDistro(key, howMany){
     return;
   }
   let multi = parseInt(await GetGameSave("multiplier"))
+  if (isNaN(multi)){
+    multi = 1
+  }
 
   oldAmount = await GetGameSave(key);
   if (oldAmount === undefined || oldAmount == "undefined"){
