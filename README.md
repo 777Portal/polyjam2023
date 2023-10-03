@@ -1,6 +1,8 @@
 
-# This is the source code   and zipped file version
- If you just want the extension without having to download and load files into chrome, install it from the chrome web store at __**[the chrome extension page (i am a link)](https://link-url-here.org)**__
+# The zipped file is the current "release"
+
+ Don't know how to install it? Ive made a tutorial. 
+ [![IMAGE ALT TEXT](http://img.youtube.com/vi/eXTXAp4S32Q/0.jpg)](http://www.youtube.com/watch?v=eXTXAp4S32Q "Tutorial")
  
-## Combatability
+## Compatibility
 This extension currently **doesn't have combatability with anything besides good ol chrome browser**, so if you have a different browser, ya can still try to install it onto their version of extensions, but it might make things break depending on the browser.
