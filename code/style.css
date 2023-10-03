@@ -1,31 +1,45 @@
-html { /*default size*/
+html {
     height: 200px;
     width: 400px; 
 }
+button{
+    border-radius: 25px;
+    font-size: small;
+    color: #F05D23;
+    border: 1px solid #ccc;
+    background-color: #000000;
+}
+button:hover{
+    border-radius: 25px;
+    font-size: small;
+    color: #F05D23;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+}
 body {
     display: block;
-    background-color: #2C3333;
-    color: #CBE4DE;
+    background-color: #000000;
+    color: #b64519;
     padding: 20px;
     margin: 10px;
     padding-bottom: 30px
 }
 h1   {
-    color: #CBE4DE
+    color: #F05D23
 }
 h3   {
-    color: #CBE4DE;
+    color: #F05D23;
     padding: 10px;
     border: 1px solid #ccc;
-    background-color: #2C3333;
+    background-color: #000000;
     width: fit-content;
 }
 p    {
-    color: #CBE4DE;
+    color: #F05D23;
 } 
 div.settings{
     background-color: #0E8388;
-    color: #CBE4DE;
+    color: #F05D23;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
@@ -38,24 +52,25 @@ a {
 }
 a:hover {
     text-decoration: none;
-    color:black; 
+    color:orange; 
 }
 a.settingsIcon {
-    position: absolute;
-    left: 350px;
+    position: -webkit-sticky;
+    position: sticky;
     top: 10px;
-    color: #CBE4DE;
+    left: 350px;
+    color: #F05D23;
 }
 a.githubIcon {
-    color: #CBE4DE;
+    color: #F05D23;
     position: fixed;
     left: 5px;
     bottom: 0;  
 }
 div.box {
-    color: #CBE4DE;
+    color: #F05D23;
     border: 1px solid #ccc;
-    background-color: #2C3333;
+    background-color: #000000;
     width: fit-content;
     margin-bottom: 15px;
     padding: 5px;
@@ -67,11 +82,17 @@ div.header {
     text-align: center;
     width: 500px;
 }
+.parent {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}  
 .circle {
     border-radius: 25px;
 }
 .center {
     margin: auto;
+    text-align: center;
     width: 50%;
 }  
 /*the heat death of the universe august 12 2036*/

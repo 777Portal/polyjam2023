@@ -1,25 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Homepage</title>
+    <title>JinxIsJustBetter1234ONG</title>
     <link rel="icon" type="image/x-icon" href="./assets/thinking.png">
     <link rel="stylesheet" href="./code/style.css">
 </head>
-<a class="settingsIcon" id="settingsIcon"><img src="./assets/settings.png" width="25" height="25"></a>
+<!-- <a class="settingsIcon" id="settingsIcon"><img src="./assets/settings.png" width="25" height="25"></a> -->
 <a class="githubIcon" id="githubIcon"><img src="./assets/github.png" width="15" height="15"></a>
-<div class="settings" id="settings"><p>Ect, ect, ect</p></div>
+<!-- <div class="settings" id="settings">
+    <h2>Settings:</h2>
+    <p> Setting 1</p>
+    <p> Setting 2</p>
+    <p> Setting 3</p>
+</div> -->
 <div id="welcomeScreen">
     <body>
-        <h1 class="center"> Polyjam 2023 </h1>
+        <h1 class="center"> Suger Rush </h1>
         <hr>
-        <div class="box center">
-            <p>Welcome, Username!</p>
-        </div>
-        <div class="circle center box">
-            <a href="https://www.google.com/" target="_blank">Start?</a>
-        </div>
+        <br>
     </body>
 </div>
-    <script type="text/javascript" src="./code/menu.js"></script> <!-- menu system -->
-</html>
 
+<div id="candy" class="parent">
+    <div id="candyCorn" class="center box"><p>Candy Corn</p></div>
+    <div id="candyPumpkin" class="center box"><p>Mini Pumpkins</p></div>
+    <div id="candyBar" class="center box"><p>Candy Bar</p></div>
+</div>
+<div id="upgrades">
+    <div id="upgrade" class="box center">
+        <h2 class="center">Purchase Upgrades!</h2>
+        <hr>
+
+        <div class="parent">
+            <button id="multiplier" class="circle">purchase multiplier upgrade 
+                (% => $)</button>
+            <div class="box">
+                <p id="multiplierLevel" class="center">Current level: 0</p>
+            </div>
+        </div>
+
+        <div class="parent">
+            <button id="lowerTime" class="circle">purchase time lowering upgrade 
+                (% => $)</button>
+            <div class="box">
+                <p id="multiplierLevel" class="center">Current level: 0</p>
+            </div>
+        </div>
+</div>
+
+<div id="converters">
+    <div id="compress" class="box">
+        <h2 class="center">Convert your candy!</h2>
+        <hr>
+        <div class="parent">
+            <button id="cornToPumpkin" class="circle">1000 Candy Corn => 1 Mini Pumpkins</button>
+            <button id="pumpkinToBar" class="circle">100 Mini Pumpkins => 1 candy bar</button>
+        </div>
+        <hr style="width:50%;">
+        <div class="parent">
+            <button id="pumpkinToCorn" class="circle">1 Mini Pumpkin  => 950 pumpkin candy</button>
+            <button id="barToPumpkin" class="circle">1 Candy Bar => 90 Mini Pumpkins</button>
+        </div>
+    </div>
+</div>
+<div id="pumpkin" class="parent"></div>
+<small href="https://discord.gg/Vw7HAN2fzU" style="font-size:0.9em; position: fixed; top: 570px;">Pre-alpha - october 2nd | join the discord to report bugs<br> https://discord.gg/Vw7HAN2fzU</small>
+
+
+<script type="text/javascript" src="./code/storage.js"></script> <!-- menu system -->
+<script type="text/javascript" src="./code/popupMain.js"></script> <!-- menu system -->
+<script type="text/javascript" src="./code/menu.js"></script> <!-- menu system -->
+</html>

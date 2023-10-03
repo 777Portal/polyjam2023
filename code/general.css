@@ -1,0 +1,62 @@
+.notifications {
+  z-index:99999 !important;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  color: #ff9a00 !important;
+}
+.bar {
+    margin: 15px;
+    position: static !important;
+    color: #ff9a00 !important;
+    background-color: #000000 !important;
+    width: fit-content;
+    height: fit-content;
+    border: 5px solid #ccc;
+    text-align: center ;
+    padding: 14px 16px;  
+    transition: all .3s ease-out;
+    animation: showButton 1s forwards;
+    font-family: Roboto,Helvetica Neue,Arial,sans-serif;
+    font-size: 10pt;
+  }
+  .bar--hidden {
+    animation: hideButton 1s forwards;
+  }
+  @keyframes hideButton {
+    0% {
+      opacity: 1;
+      display: block;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+  
+  @keyframes showButton {
+    0% {
+      opacity: 0;
+      display: none;
+    }
+    1% {
+      opacity: 0.01;
+      display: block;
+    }
+    100% {
+      opacity: 1;
+      display: block;
+    }
+}  
+.item {
+    vertical-align: middle;
+    margin: auto;
+    text-align: left;
+    padding-left: 10%;
+}
+.bar p {
+    color: #ff9a00 !important;
+    position: static;
+    left: 0px;
+    top: 0px;
+}

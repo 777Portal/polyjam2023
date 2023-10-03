@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Polyjam 2023 submission",
+    "name": "Suger Rush",
     "description": "Extension made for the 2023 PolyJam, by ExonAuto.",
-    "version": "0.0",
+    "version": "0.0.0.1",
     "permissions": [
       "storage",
       "unlimitedStorage"
@@ -11,7 +11,20 @@
       "default_popup": "main.html",
       "width": 300,
       "height": 400,    
-      "default_icon": "./assets/thinking.png"
+      "default_icon": "assets/icon128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*/*"],
+        "css": ["./code/general.css"],
+        "js": ["./code/storage.js", "./code/hud.js"]
+      }
+    ],   
+    "icons": {
+      "16": "assets/icon16.png",
+      "32": "assets/icon32.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
     }
   }
   
