@@ -82,6 +82,7 @@ async function addAllMultipliers(){
         } else {
           this.innerText = `Not enough ${costType}\n (need ${endingCost * -1} more)`
         }
+
         setTimeout(() => {
           this.disabled = false
           this.innerText = oldText;

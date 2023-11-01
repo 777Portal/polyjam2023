@@ -8,11 +8,14 @@ function getRandomHexColor() {
     return color;
 }
 
+async function checkVersion(){
+    const response = await fetch("https://version.socooirafa12345.workers.dev/");
+    const version = await response.json();
+    console.log(version);
+}
+
 document.addEventListener("visibilitychange", async () => {
-    if (!document.hidden) {
-        //getPumpkins();
-        //newNotification("Why are you looking!"); //test
-    }
+    checkVersion();
 });
 
 // async function getPumpkins() {
