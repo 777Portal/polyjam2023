@@ -18,20 +18,19 @@ async function checkIfNewUser() {
 }
 checkIfNewUser();
 
-function checkIfExtensionMenu() {
+function checkIfFocused() {
   if (document.hidden) {
       // User is inside the extension menu, stop the timer and random candy giving
       clearInterval(timeInterval);
       clearInterval(trickOrTreatInterval);
-      console.log('User is inside the extension menu. Timer and random candy giving stopped.');
   } else {
       timeInterval = setInterval(getTime, 1000);
       trickOrTreatInterval = setInterval(getTrickOrTreat, 60000);
   }
 }
 
-document.addEventListener('visibilitychange', checkIfExtensionMenu);
-checkIfExtensionMenu();
+document.addEventListener('visibilitychange', checkIfFocused);
+checkIfFocused();
 
 async function setStorage(key, value) {
   try {
@@ -58,7 +57,7 @@ async function getStorage(key) {
 async function changeGameSave(keyValue, newValue) {
   try {
     var value = await getStorage('gamesave');
-    var dataSplit = value.split('|'); // pumpkins | candy
+    var dataSplit = value.split('|'); // pumpkins | candy, ect
     let finalValue = '';
     let keyExists = false;
 
@@ -112,8 +111,7 @@ async function GetGameSave(keyValue) {
         
     } catch (error) {
         if (error !== "Key 'gamesave' is undefined or null (skill issue)") {
-            await setStorage('gamesave', 'pumpkins;0|created;' + new Date());
-            console.warn('[get storage], ' + error + '. Assuming it\'s empty and creating a new game file');
+            console.warn('[get storage], ' + error + '. Assuming it\'s empty, and another level will take care of it.');
         } else {
             console.error(error);
         }
@@ -133,8 +131,7 @@ async function getTime(){
           await changeGameSave("timeSpentOpen", "0");
           return;
         } else {
-          await changeGameSave("timeSpentOpen", oldTime+1); // therotically you could check the time difference for more accuracy, but i aint doin all dat (might patch later)
-          //console.log("time changed")
+          await changeGameSave("timeSpentOpen", oldTime+1);
         }
       } catch (error){
         console.log(error)
@@ -197,31 +194,16 @@ async function CandyDistro(key, howMany){
   oldAmount = parseInt(oldAmount)
   const final = Math.round(oldAmount+(newAmount*multi));
   await changeGameSave(key, final);
+  if(multi == 1){
+    newNotification(`Candy obtained! \n ${candyType} candy ++ ${howMany} (${oldAmount+(newAmount*multi)})`)
+    return
+  }
   
   newNotification(`Candy obtained! \n ${candyType} candy ++ ${howMany} (${oldAmount+(newAmount*multi)}) \n You got ${final-(newAmount+oldAmount)} extra from your multiplier!`)
 }
-
-// checking for changes cuz duh (nvm too much console.logs)
-// chrome.storage.onChanged.addListener((changes, namespace) => {
-//     for (let [key, { oldValue, newValue }] of Object.entries(changes)) {
-//       console.log(
-//         `Storage key "${key}" in namespace "${namespace}" changed.`,
-//         `Old value was "${oldValue}", new value is "${newValue}".`
-//       );
-//     }
-// });  
 
 //last resort
 function clear(){
   console.log("")
   chrome.storage.sync.clear()
 }
-// function clearData() {
-//   let text = "Press a button!\nEither OK or Cancel.";
-//   if (confirm(text) == true) {
-//     clear();
-//   } else {
-//     console.log("canceled")
-//   }
-// }
-// clearData();
