@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Suger Rush",
     "description": "Extension made for the 2023 PolyJam, by ExonAuto.",
-    "version": "0.0.0.1",
+    "version": "0.0.1",
     "permissions": [
       "storage",
       "unlimitedStorage"

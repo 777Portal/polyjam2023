@@ -30,8 +30,6 @@ function addPumpkinsMenu(){
     }
 }
 
-//addPumpkinsMenu()
-
 // document.getElementById("settingsIcon").addEventListener("click", function(){
 //     hideShowElement("settings");
 //     console.log("clicked on settings")

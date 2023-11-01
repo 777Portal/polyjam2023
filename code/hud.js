@@ -1,4 +1,3 @@
-var img = document.createElement("img");
 
 function getRandomHexColor() {
     var letters = '0123456789ABCDEF';
@@ -17,21 +16,21 @@ document.addEventListener("visibilitychange", async () => {
 });
 
 // async function getPumpkins() {
-//     console.log("got pumpkins?");
-//     pumpkins = Math.floor(Math.random() * 10); // max is 10, least is 0
-//     try {
-//         var retrievedValue = await GetGameSave('pumpkins');
-//         newAmountOfPumpkins = parseInt(retrievedValue) + pumpkins;
-//         console.log(`Got more pumpkins! ${retrievedValue} => ${newAmountOfPumpkins}`);
-//         await changeGameSave("pumpkins", newAmountOfPumpkins); // Pass the updated value, not a string
-//         newNotification(`New pumpkins! \n ${retrievedValue} => ${newAmountOfPumpkins}) (+${newAmountOfPumpkins})`);
-//     } catch (error) {
+    //     console.log("got pumpkins?");
+    //     pumpkins = Math.floor(Math.random() * 10); // max is 10, least is 0
+    //     try {
+        //         var retrievedValue = await GetGameSave('pumpkins');
+        //         newAmountOfPumpkins = parseInt(retrievedValue) + pumpkins;
+        //         console.log(`Got more pumpkins! ${retrievedValue} => ${newAmountOfPumpkins}`);
+        //         await changeGameSave("pumpkins", newAmountOfPumpkins); // Pass the updated value, not a string
+        //         newNotification(`New pumpkins! \n ${retrievedValue} => ${newAmountOfPumpkins}) (+${newAmountOfPumpkins})`);
+        //     } catch (error) {
 //         console.error(error);
 //     }
 // }
 //getPumpkins();
 
-
+            
 window.onload = function () {
     var div = document.createElement('div');
     div.id = "notificationHolder";
@@ -62,7 +61,7 @@ function newNotification(text) {
     div.prepend(bar);
 
     bar.addEventListener("click", function () {
-        clearInterval(this.timer); // Stop the timer associated with this notification
+        clearInterval(this.timer);
         this.remove();
     });
 
@@ -82,8 +81,8 @@ function newNotification(text) {
             var timerElem = document.getElementById(id + "timer");
             timerElem.innerText = Math.round(timeLeft * 100) / 100; // rounded to the first decimal
         } catch (e) {
+            //newNotification(text)
             // 99% of the tiem due to dom being not loaded so we can j ingore it :) if not it'll fix itself
         }
     }, 100);
 }
-// newNotification("Some important text!");
